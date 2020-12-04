@@ -35,6 +35,7 @@ def make_map(offsetX, offsetY, f_id):
 
 file = input("Image (at least 128x128px): ")
 image = Image.open(file)
+image = image.convert("RGBA")
 w,h = (image.size)
 Msize = [None, None]
 nwimg = {"x":0, "y":0, "w":0, "h":0}
@@ -42,9 +43,9 @@ tmimg = None
 if w%MAP_SIZE or h%MAP_SIZE:
 	if w%MAP_SIZE:
 		print("image WIDTH is not multiple of "+str(MAP_SIZE))
-		print("Press '2' to make extra maps to FIT the image width and CENTER it. ("+str((w//MAP_SIZE)+1)+" maps width)")
-		print("Press '1' to make extra maps to FIT the image width. ("+str((w//MAP_SIZE)+1)+" maps width)")
-		print("Press '0' to CROP the image to fit the maps width. ("+str(w//MAP_SIZE)+" maps width)")
+		print("Type '2' to make extra maps to FIT the image width and CENTER it. ("+str((w//MAP_SIZE)+1)+" maps width)")
+		print("Type '1' to make extra maps to FIT the image width. ("+str((w//MAP_SIZE)+1)+" maps width)")
+		print("Type '0' to CROP the image to fit the maps width. ("+str(w//MAP_SIZE)+" maps width)")
 		optX = int(input(">> "))
 		if optX == 2:
 			Msize[0] = (w//MAP_SIZE)+1
@@ -64,9 +65,9 @@ if w%MAP_SIZE or h%MAP_SIZE:
 		nwimg["w"] = Msize[0]*MAP_SIZE
 	if h%MAP_SIZE:
 		print("image HEIGHT is not multiple of "+str(MAP_SIZE))
-		print("Press '2' to make extra maps to FIT the image height and CENTER it. ("+str((h//MAP_SIZE)+1)+" maps width)")
-		print("Press '1' to make extra maps to FIT the image height. ("+str((h//MAP_SIZE)+1)+" maps width)")
-		print("Press '0' to CROP the image to fit the maps height. ("+str(h//MAP_SIZE)+" maps width)")
+		print("Type '2' to make extra maps to FIT the image height and CENTER it. ("+str((h//MAP_SIZE)+1)+" maps width)")
+		print("Type '1' to make extra maps to FIT the image height. ("+str((h//MAP_SIZE)+1)+" maps width)")
+		print("Type '0' to CROP the image to fit the maps height. ("+str(h//MAP_SIZE)+" maps width)")
 		optY = int(input(">> "))
 		if optY == 2:
 			Msize[1] = (h//MAP_SIZE)+1
