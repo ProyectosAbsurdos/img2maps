@@ -1,5 +1,5 @@
 # img2maps
-![alt text](https://github.com/ProyectosAbsurdos/img2maps/blob/main/example/img2maps.png?raw=true)
+![img2maps](https://github.com/ProyectosAbsurdos/img2maps/blob/main/example/img2maps.png?raw=true)
 A python script to make map.dat from images. Works on 1.14 and up.
 This script does not accept command line arguments.
 **WARNING:** This script is *really* slow. 
