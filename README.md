@@ -8,7 +8,7 @@ NBT
 Numpy
 Pillow
 ```
-#Steps
+##Steps
 1. Scale any image you want using your preferred image editor and export it to the same folder where `img2maps.py` is. (ex: for a poster of 2x3 maps, your image needs to be at most 256x384 px)
 2. In the game, make *n* filled_maps, where *n* is the size X times Y the size of the poster (ex: 2x3 = 6 filled_maps) 
 3. Take the ID of the first filled_map you got in the step 2.
@@ -19,6 +19,6 @@ Pillow
 8. Quickly drag and drop all the generated `map_x.dat` to ../<world name>/data/
 9. Done!
 
-#CONFIG
+##CONFIG
 - **MAP_PREV** *True/False* Set it to false if you dont want the preview
 - **IMG_ALPH** *True/False* If your image is a PNG with transparent pixels, keeps transparency in the maps too
